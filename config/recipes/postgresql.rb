@@ -1,7 +1,7 @@
 _cset(:postgresql_host, "localhost")
 _cset(:postgresql_user) { application }
 _cset(:postgresql_password) { Capistrano::CLI.password_prompt "PostgreSQL Password: " }
-_cset(:postgresql_database) { "#{application}_production" }
+_cset(:postgresql_database) { "#{application}_#{stage}" }
 
 namespace :postgresql do
   desc "Create a database for this application."
