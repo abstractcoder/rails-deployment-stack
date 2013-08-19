@@ -16,6 +16,8 @@ bundle exec vagrant up
 bundle exec knife solo bootstrap vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json 
 bundle exec cap vagrant deploy:setup deploy:cold
 
+Type in password for postgresql user. The vagrant database.yml has this set to 'secret'. This WILL CHANGE in future versions of the stack.
+
 ## Production
 
 Uncomment sensitive files in .gitignore once you start adding in your sensitive info.
