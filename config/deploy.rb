@@ -2,6 +2,7 @@ require "rvm/capistrano"
 require "bundler/capistrano"
 
 set :stages, %w(vagrant production)
+set :rails_env, defer { stage }
 # set :default_stage, "vagrant"
 require 'capistrano/ext/multistage'
 
