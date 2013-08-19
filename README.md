@@ -4,7 +4,7 @@ A simple single server deployment stack that handles server provisioning and app
 
 ## Prerequisite
 
-Install Virtual Box
+Install "Virtual Box":https://www.virtualbox.org/
 
 ## Install Commands
 
@@ -18,9 +18,11 @@ bundle exec cap vagrant deploy:setup deploy:cold
 
 Type in password for PostgreSQL user. The vagrant database.yml has this set to 'secret'. This WILL CHANGE in future versions of the stack.
 
+Visit https://192.168.33.10/
+
 ## Production
 
-Uncomment sensitive files in .gitignore once you start adding in your sensitive info.
+Uncomment sensitive files in .gitignore once you start adding in your info.
 
 Coming Soon...
 

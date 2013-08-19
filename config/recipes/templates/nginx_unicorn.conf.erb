@@ -5,7 +5,7 @@ upstream unicorn {
 server {
   listen 80 default deferred;
   # server_name example.com;
-  root <%= current_path %>/public;
+  root <%= shared_path %>/assets;
 
   location ^~ /assets/ {
     gzip_static on;
@@ -36,7 +36,7 @@ server {
   ssl_ciphers           ALL:-ADH:+HIGH:+MEDIUM:-LOW:-SSLv2:-EXP;
   ssl_session_cache     shared:SSL:10m;
  
-  root <%= current_path %>/public;
+  root <%= shared_path %>/assets;
  
   location ^~ /assets/ {
     gzip_static on;
