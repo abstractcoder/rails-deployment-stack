@@ -14,7 +14,7 @@ namespace :rails do
     exec "RAILS_ENV=#{rails_env} bundle exec foreman run #{ENV['TASK']}"
   end
   
-  desc "Tail Log"
+  desc "Tail log"
   task :log, roles: :app do
     run_interactively "cd #{shared_path}/log; tail -f #{ENV['LOG'] || stage}.log"
   end
