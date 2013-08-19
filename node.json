@@ -6,7 +6,8 @@
     "gems": {
       "2.0.0-p247": [
         {"name": "rake"},
-        {"name": "bundler"}
+        {"name": "bundler"},
+        {"name": "mailcatcher"}
       ]
     }
   },

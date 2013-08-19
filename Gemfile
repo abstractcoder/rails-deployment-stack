@@ -52,8 +52,6 @@ group :development do
   gem 'better_errors' # Better Errors
   gem 'binding_of_caller' # Better Errors Advanced Features
   
-  gem 'mailcatcher', require: false # Preview email
-  
   # Deploy with Capistrano
   gem 'capistrano', require: false
   gem 'rvm-capistrano', '1.4.3', require: false
@@ -63,8 +61,4 @@ group :development do
   gem 'vagrant', '~>1.0.7', require: false
   gem 'knife-solo', require: false
   gem 'berkshelf', require: false
-end
-
-group :vagrant do
-  gem 'mailcatcher', require: false # Preview email
 end
