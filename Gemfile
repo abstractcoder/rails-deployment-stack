@@ -36,10 +36,34 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'whenever' # Cron jobs
+gem 'sidekiq' # Background jobs
+
+group :development do  
+  gem 'better_errors' # Better Errors
+  gem 'binding_of_caller' # Better Errors Advanced Features
+  
+  gem 'mailcatcher', require: false # Preview email
+  
+  # Deploy with Capistrano
+  gem 'capistrano', require: false
+  gem 'rvm-capistrano', '1.4.3', require: false
+  
+  # Provision
+  gem 'chef', require: false
+  gem 'vagrant', '~>1.0.7', require: false
+  gem 'knife-solo', require: false
+  gem 'berkshelf', require: false
+end
+
+group :vagrant do
+  gem 'mailcatcher', require: false # Preview email
+end

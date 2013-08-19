@@ -1,28 +1,54 @@
-== README
+## Install Instructions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Install Virtual Box
 
-Things you may want to cover:
+then run the following commands:
 
-* Ruby version
+git clone https://github.com/abstracoder/rails-deployment-example.git
+cd rails-deployment-example
+bundle
+bundle exec berks install
+bundle exec vagrant up
+bundle exec knife solo bootstrap vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json 
+bundle exec cap vagrant deploy:setup deploy:cold
 
-* System dependencies
+## Production
 
-* Configuration
+Uncomment sensitive files in .gitignore once you start adding in your sensitive info.
 
-* Database creation
+## Development
 
-* Database initialization
+## Mail
 
-* How to run the test suite
+## Scheduled Tasks
 
-* Services (job queues, cache servers, search engines, etc.)
+## Background Tasks
 
-* Deployment instructions
+## Technologies
 
-* ...
+* Chef
+* Knife Solo
+* Capistano
+* Berkshelf
 
+* Vagrant
+* Virtualbox
+* Foreman
+* Upstart
+* RVM
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Unicorn
+* Mailcatcher
+* Whenever
+* Sidekiq
+
+* Ruby 2.0
+* Rails 4.0
+
+Create PostgreSQL user that is the same as app name
+Run rake db:create
+
+h3. Get App Running In Vagrant
+In the root of the rails project
+
+Special Thanks to Ryan Bates

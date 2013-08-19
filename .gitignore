@@ -14,3 +14,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# For OS X
+.DS_Store
+
+# Ignore sensitive files
+# .env
+# *.key
+# *.crt
+# /deploy/env/*/database.yml

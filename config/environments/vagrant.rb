@@ -1,6 +1,10 @@
 RailsDeploymentExample::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.action_mailer.default_url_options = { :host => '192.168.33.10' }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  
   # Code is not reloaded between requests.
   config.cache_classes = true
 
