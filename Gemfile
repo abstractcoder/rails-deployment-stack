@@ -46,6 +46,7 @@ gem 'unicorn'
 
 gem 'whenever' # Cron jobs
 gem 'sidekiq' # Background jobs
+gem 'foreman', require: false # Process management
 
 group :development do  
   gem 'better_errors' # Better Errors

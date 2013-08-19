@@ -1,8 +1,12 @@
-## Install Instructions
+# Rails Deployment Stack
+
+A simple single server deployment stack that handles server provisioning and application deployment. Includes local testing with Vagrant as well as Production deployments. Use this as the basis for your own deployment stack.
+
+## Prerequisite
 
 Install Virtual Box
 
-then run the following commands:
+## Install Commands
 
 git clone https://github.com/abstracoder/rails-deployment-example.git
 cd rails-deployment-example
@@ -16,13 +20,23 @@ bundle exec cap vagrant deploy:setup deploy:cold
 
 Uncomment sensitive files in .gitignore once you start adding in your sensitive info.
 
+Coming Soon...
+
 ## Development
+
+Coming Soon...
 
 ## Mail
 
+Coming Soon...
+
 ## Scheduled Tasks
 
+Coming Soon...
+
 ## Background Tasks
+
+Coming Soon...
 
 ## Technologies
 
@@ -40,15 +54,14 @@ Uncomment sensitive files in .gitignore once you start adding in your sensitive 
 * Unicorn
 * Mailcatcher
 * Whenever
+* Redis
 * Sidekiq
 
 * Ruby 2.0
 * Rails 4.0
 
-Create PostgreSQL user that is the same as app name
-Run rake db:create
-
-h3. Get App Running In Vagrant
-In the root of the rails project
+## Thanks
 
 Special Thanks to Ryan Bates
+
+More Coming Soon...

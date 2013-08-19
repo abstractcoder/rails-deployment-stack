@@ -14,7 +14,7 @@ namespace :postgresql do
   desc "Upload the database.yml for the current environment"
   task :upload_config, roles: :app do
     upload(File.expand_path("../../../deploy/env/#{stage}/database.yml", __FILE__), "/tmp/database.yml")
-    run "#{sudo} mv /tmp/database.yml #{current_path}/config/database.yml"
+    run "#{sudo} mv /tmp/database.yml #{release_path}/config/database.yml"
   end
   after "deploy:finalize_update", "postgresql:upload_config"
 end
