@@ -84,8 +84,9 @@ Coming Soon...
 ```
 
 ## Changes from stock Rails
-https://github.com/abstractcoder/rails-deployment-stack/compare/fe308ca55ffd653d2b045473d4c9cca8e0af8bc0...HEAD
+[https://github.com/abstractcoder/rails-deployment-stack/compare/fe308ca55ffd653d2b045473d4c9cca8e0af8bc0...HEAD](View Changes)
 
+```
 A       .env
 M       .gitignore
 A       Berksfile
@@ -133,7 +134,7 @@ A       deploy/env/vagrant/database.yml
 A       node.json
 A       test/controllers/welcome_controller_test.rb
 A       test/helpers/welcome_helper_test.rb
-
+```
 
 ## Thanks
 
