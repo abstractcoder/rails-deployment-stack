@@ -84,7 +84,7 @@ Coming Soon...
 ```
 
 ## Changes from stock Rails
-[https://github.com/abstractcoder/rails-deployment-stack/compare/fe308ca55ffd653d2b045473d4c9cca8e0af8bc0...HEAD](View Changes)
+[View Changes](https://github.com/abstractcoder/rails-deployment-stack/compare/fe308ca55ffd653d2b045473d4c9cca8e0af8bc0...HEAD)
 
 ```
 A       .env
