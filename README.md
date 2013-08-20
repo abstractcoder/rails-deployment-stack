@@ -4,17 +4,19 @@ A simple single server deployment stack that handles server provisioning and app
 
 ## Prerequisite
 
-Install "Virtual Box":https://www.virtualbox.org/
+Install [Virtual Box](https://www.virtualbox.org)
 
 ## Install Commands
 
-git clone https://github.com/abstracoder/rails-deployment-example.git
+```bash
+git clone https://github.com/abstracoder/rails-deployment-stack.git
 cd rails-deployment-example
 bundle
 bundle exec berks install
 bundle exec vagrant up
 bundle exec knife solo bootstrap vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json 
 bundle exec cap vagrant deploy:setup deploy:cold
+```
 
 Type in password for PostgreSQL user. The vagrant database.yml has this set to 'secret'. This WILL CHANGE in future versions of the stack.
 
@@ -44,6 +46,7 @@ Coming Soon...
 
 ## Technologies
 
+```
 * Chef
 * Knife Solo
 * Capistano
@@ -63,6 +66,7 @@ Coming Soon...
 
 * Ruby 2.0
 * Rails 4.0
+```
 
 ## Thanks
 
