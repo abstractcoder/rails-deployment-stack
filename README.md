@@ -2,15 +2,17 @@
 
 A simple single server deployment stack that handles server provisioning and application deployment. Includes local testing with Vagrant as well as Production deployments. Use this as the basis for your own deployment stack.
 
-## Prerequisite
+## Prerequisites
 
 Install [Virtual Box](https://www.virtualbox.org)
+Install Ruby 2.0
+Install Bundler
 
 ## Install Commands
 
 ```bash
-git clone https://github.com/abstracoder/rails-deployment-stack.git
-cd rails-deployment-example
+git clone https://github.com/abstractcoder/rails-deployment-stack.git
+cd rails-deployment-stack
 bundle
 bundle exec berks install
 bundle exec vagrant up
@@ -75,6 +77,7 @@ Special Thanks to Ryan Bates
 More Coming Soon...
 
 ## Todos
-- [ ] Make sure everything works
-- [ ] Automatically generate self signed certificate
-- [ ] Upload production certificates
+- Make sure everything works
+- Remove password requirement from PostgreSQL setup
+- Automatically generate self signed certificate
+- Upload production certificates

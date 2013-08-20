@@ -18,6 +18,8 @@
 # For OS X
 .DS_Store
 
+.vagrant
+
 # Ignore sensitive files
 *.key
 *.crt
