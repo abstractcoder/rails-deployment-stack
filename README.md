@@ -7,11 +7,13 @@ A simple single server deployment stack that handles server provisioning and app
 - Install Git
 - Install [Virtual Box](https://www.virtualbox.org)
 - Install Ruby 2.0
--- To quickly get up and running you can install Ruby 2.0 through RVM
--- ```\curl -L https://get.rvm.io | bash -s stable --ruby=2.0```
--- If you already have RVM installed
--- ```rvm get stable```
--- ```rvm install 2.0```
+To quickly get up and running you can install Ruby 2.0 through RVM
+```\curl -L https://get.rvm.io | bash -s stable --ruby=2.0```
+If you already have RVM installed
+```bash
+rvm get stable
+rvm install 2.0
+```
 - Install Bundler
 
 ## Install Commands
