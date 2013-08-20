@@ -27,6 +27,7 @@
     "recipe[git]",
     "recipe[rvm::system]",
     "recipe[postgresql::server]",
+    "recipe[postgresql::server_dev]",
     "recipe[nginx]",
     "recipe[nodejs]",
     "recipe[redis]",

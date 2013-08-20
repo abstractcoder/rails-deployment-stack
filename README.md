@@ -4,9 +4,15 @@ A simple single server deployment stack that handles server provisioning and app
 
 ## Prerequisites
 
-Install [Virtual Box](https://www.virtualbox.org)
-Install Ruby 2.0
-Install Bundler
+- Install Git
+- Install [Virtual Box](https://www.virtualbox.org)
+- Install Ruby 2.0
+-- To quickly get up and running you can install Ruby 2.0 through RVM
+-- ```\curl -L https://get.rvm.io | bash -s stable --ruby=2.0```
+-- If you already have RVM installed
+-- ```rvm get stable```
+-- ```rvm install 2.0```
+- Install Bundler
 
 ## Install Commands
 
@@ -16,7 +22,7 @@ cd rails-deployment-stack
 bundle
 bundle exec berks install
 bundle exec vagrant up
-bundle exec knife solo bootstrap vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json 
+bundle exec knife solo bootstrap vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json
 bundle exec cap vagrant deploy:setup deploy:cold
 ```
 
@@ -79,5 +85,4 @@ More Coming Soon...
 ## Todos
 - Make sure everything works
 - Remove password requirement from PostgreSQL setup
-- Automatically generate self signed certificate
-- Upload production certificates
+- Make postgres role and database creation idempotent
