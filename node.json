@@ -5,8 +5,6 @@
     "default_ruby": "2.0.0-p247",
     "gems": {
       "2.0.0-p247": [
-        {"name": "rake"},
-        {"name": "bundler"},
         {"name": "mailcatcher"}
       ]
     }
