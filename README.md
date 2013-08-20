@@ -75,6 +75,6 @@ Special Thanks to Ryan Bates
 More Coming Soon...
 
 ## Todos
-[ ] Make sure everything works
-[ ] Automatically generate self signed certificate
-[ ] Upload production certificates
+- [ ] Make sure everything works
+- [ ] Automatically generate self signed certificate
+- [ ] Upload production certificates
