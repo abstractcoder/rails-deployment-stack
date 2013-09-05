@@ -29,8 +29,9 @@ cd rails-deployment-stack
 bundle
 bundle exec berks install
 bundle exec vagrant up
-bundle exec knife solo bootstrap vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json
-bundle exec cap vagrant deploy:setup deploy:cold
+bundle exec knife solo prepare vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json
+bundle exec knife solo cook vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json
+cd deploy/env/vagrant && bundle exec foreman run cap vagrant deploy:setup deploy:cold
 ```
 
 Type in password for PostgreSQL user. The vagrant database.yml has this set to 'secret'. This WILL CHANGE in future versions of the stack.
@@ -78,6 +79,7 @@ Coming Soon...
 * Whenever
 * Redis
 * Sidekiq
+* Backup
 
 * Ruby 2.0
 * Rails 4.0
@@ -143,6 +145,7 @@ Special Thanks to Ryan Bates
 More Coming Soon...
 
 ## Todos
+- Backup gem
 - Make sure everything works
 - Remove password requirement from PostgreSQL setup
 - Make postgres role and database creation idempotent

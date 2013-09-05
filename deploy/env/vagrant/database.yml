@@ -1,8 +1,0 @@
-vagrant:
-  adapter: postgresql
-  encoding: unicode
-  database: rails_deployment_example_vagrant
-  pool: 5
-  host: localhost
-  username: rails_deployment_example
-  password: secret

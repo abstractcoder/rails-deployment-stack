@@ -30,6 +30,7 @@
     "recipe[nodejs]",
     "recipe[redis]",
     "recipe[wkhtmltopdf]",
-    "recipe[imagemagick]"
+    "recipe[imagemagick]",
+    "recipe[unattended-updates]"
   ]
 }

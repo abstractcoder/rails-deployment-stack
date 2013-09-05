@@ -47,6 +47,7 @@ gem 'unicorn'
 gem 'whenever' # Cron jobs
 gem 'sidekiq' # Background jobs
 gem 'foreman', require: false # Process management
+gem 'backup'
 
 group :development do  
   gem 'better_errors' # Better Errors
@@ -57,8 +58,5 @@ group :development do
   gem 'rvm-capistrano', '1.4.3', require: false
   
   # Provision
-  gem 'chef', require: false
-  gem 'vagrant', '~>1.0.7', require: false
-  gem 'knife-solo', require: false
   gem 'berkshelf', require: false
 end

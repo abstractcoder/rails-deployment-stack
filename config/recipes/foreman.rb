@@ -10,22 +10,22 @@ namespace :foreman do
     upload(File.expand_path("../../../deploy/env/#{stage}/Procfile", __FILE__), "/tmp/Procfile")
     run "#{sudo} mv /tmp/.env #{current_path}/.env"
     run "#{sudo} mv /tmp/Procfile #{current_path}/Procfile"
-    run "cd #{current_path} && #{foreman_sudo} #{foreman_cmd} export upstart #{foreman_upstart_path} --app foreman_#{application} --user #{user} --log #{shared_path}/log"
+    run "cd #{current_path} && #{foreman_sudo} #{foreman_cmd} export upstart #{foreman_upstart_path} --app #{application} --user #{user} --log #{shared_path}/log"
   end
 
   desc "Start the application services"
   task :start, roles: :app do
-    sudo "#{sudo} service foreman_#{application} start"
+    sudo "#{sudo} service #{application} start"
   end
 
   desc "Stop the application services"
   task :stop, roles: :app do
-    sudo "#{sudo} service foreman_#{application} stop"
+    sudo "#{sudo} service #{application} stop"
   end
 
   desc "Restart the application services"
   task :restart, roles: :app do
-    sudo "#{sudo} service foreman_#{application} start || #{sudo} service foreman_#{application} restart"
+    sudo "#{sudo} service #{application} start || #{sudo} service #{application} restart"
   end
 end
 

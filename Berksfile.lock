@@ -1,5 +1,5 @@
 {
-  "sha": "49a03adc6e89a282d71e54b202eb511b7aec0cd1",
+  "sha": "f2c1fd9014684110283040d32ae2f0deca6bdcdf",
   "sources": {
     "git": {
       "locked_version": "2.5.2"
@@ -27,6 +27,11 @@
       "locked_version": "0.0.4",
       "git": "git://github.com/ctrabold/chef-redis.git",
       "ref": "e3a89f34d0f5b81867ae9e07a9404ac89e1ff61c"
+    },
+    "unattended-upgrades": {
+      "locked_version": "1.0.0",
+      "git": "git://github.com/firstbanco/chef-unattended-upgrades.git",
+      "ref": "24cf40f5743fac8e7814e58cc8e3dde2f1ca2de9"
     },
     "wkhtmltopdf": {
       "locked_version": "0.1.0"

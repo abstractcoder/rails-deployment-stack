@@ -21,7 +21,6 @@
 
 job_type :rake, "cd :path && :environment_variable=:environment bundle exec foreman run rake :task :output"
 
-every 1.hours do
-  # Example scheduled task
-  rake "db:version"
+every 1.day, :at => '01:01' do
+  rake 'db:backup'
 end

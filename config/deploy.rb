@@ -12,6 +12,9 @@ set :whenever_output, defer { "#{shared_path}/log/cron.log" }
 set :whenever_update_flags, defer { "--update-crontab #{whenever_identifier} --set environment=#{whenever_environment}\\&output=#{whenever_output}" } # notice the escaping \& passed to the shell
 require "whenever/capistrano"
 
+set :postgresql_user, ENV['DB_USER']
+set :postgresql_password, ENV['DB_PASSWORD']
+
 load 'config/recipes/foreman'
 load "config/recipes/base"
 load "config/recipes/nginx"
