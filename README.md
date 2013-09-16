@@ -40,12 +40,17 @@ Type in password for PostgreSQL user. The vagrant database.yml has this set to '
 Visit https://192.168.33.10/
 
 Setup Swap
+
+```bash
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=512k
 sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo echo '/swapfile       none    swap    sw      0       0 ' >> /etc/fstab
 sudo chown root:root /swapfile 
 sudo chmod 0600 /swapfile
+```
+
+Todo: 
 
 Schedule automatic reboots
 
