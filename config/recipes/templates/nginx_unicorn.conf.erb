@@ -5,7 +5,7 @@ upstream unicorn {
 server {
   listen 80 default deferred;
   # server_name example.com;
-  root <%= shared_path %>/assets;
+  root <%= current_path %>/public;
 
   location ^~ /assets/ {
     gzip_static on;
@@ -13,7 +13,7 @@ server {
     add_header Cache-Control public;
   }
 
-  try_files $uri/index.html $uri @unicorn;
+  try_files $uri/index.html $uri assets/$uri/index.html assets/$uri @unicorn;
   location @unicorn {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header Host $http_host;
@@ -36,7 +36,7 @@ server {
   ssl_ciphers           ALL:-ADH:+HIGH:+MEDIUM:-LOW:-SSLv2:-EXP;
   ssl_session_cache     shared:SSL:10m;
  
-  root <%= shared_path %>/assets;
+  root <%= current_path %>/public;
  
   location ^~ /assets/ {
     gzip_static on;
@@ -44,7 +44,7 @@ server {
     add_header Cache-Control public;
   }
  
-  try_files $uri/index.html $uri @unicorn;
+  try_files $uri/index.html $uri assets/$uri/index.html assets/$uri @unicorn;
   location @unicorn {
     proxy_set_header  X-Real-IP       $remote_addr;
     proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;

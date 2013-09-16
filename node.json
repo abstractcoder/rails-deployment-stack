@@ -31,6 +31,6 @@
     "recipe[redis]",
     "recipe[wkhtmltopdf]",
     "recipe[imagemagick]",
-    "recipe[unattended-updates]"
+    "recipe[unattended-upgrades]"
   ]
 }

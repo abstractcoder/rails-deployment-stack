@@ -26,17 +26,28 @@ gem install bundler
 ```bash
 git clone https://github.com/abstractcoder/rails-deployment-stack.git
 cd rails-deployment-stack
+bundle install --gemfile Gemfile.tools
 bundle
-bundle exec berks install
-bundle exec vagrant up
-bundle exec knife solo prepare vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json
-bundle exec knife solo cook vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json
+BUNDLE_GEMFILE=Gemfile.tools bundle exec berks install
+BUNDLE_GEMFILE=Gemfile.tools bundle exec vagrant up
+BUNDLE_GEMFILE=Gemfile.tools bundle exec knife solo prepare vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json
+BUNDLE_GEMFILE=Gemfile.tools bundle exec knife solo cook vagrant@localhost -p 2222 -i ~/.vagrant.d/insecure_private_key node.json
 cd deploy/env/vagrant && bundle exec foreman run cap vagrant deploy:setup deploy:cold
 ```
 
 Type in password for PostgreSQL user. The vagrant database.yml has this set to 'secret'. This WILL CHANGE in future versions of the stack.
 
 Visit https://192.168.33.10/
+
+Setup Swap
+sudo dd if=/dev/zero of=/swapfile bs=1024 count=512k
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo echo '/swapfile       none    swap    sw      0       0 ' >> /etc/fstab
+sudo chown root:root /swapfile 
+sudo chmod 0600 /swapfile
+
+Schedule automatic reboots
 
 ## Production
 
